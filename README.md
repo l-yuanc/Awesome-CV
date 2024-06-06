@@ -91,6 +91,10 @@ Or using docker:
 
 ```bash
 docker run --rm --user $(id -u):$(id -g) -i -w "/doc" -v "$PWD":/doc thomasweise/texlive make
+
+# if use it on windows，just run start.bat
+docker run --rm  -i -w "/doc" -v "%cd%":/doc thomasweise/docker-texlive-full  make
+
 ```
 
 In either case, this should result in the creation of ``{your-cv}.pdf``
